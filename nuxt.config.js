@@ -2,7 +2,7 @@ export default {
   target: 'static',
   router: {
     base: '/rdam-questionario/'
-  }
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
