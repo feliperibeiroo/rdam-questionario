@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   router: {
-    base: '/SistemaLeadTime/'
+    base: '/rdam-questionario/'
   }
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
