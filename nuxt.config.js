@@ -1,6 +1,5 @@
 export default {
   target: 'static',
-  mode: 'spa',
   router: {
     base: '/rdam-questionario/'
   },
