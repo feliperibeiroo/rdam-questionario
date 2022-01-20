@@ -39,7 +39,7 @@
           <div class="form-check">
             <input
               v-model="tipo"
-              value="transportadora"
+              value="entrega"
               class="
                 form-check-input
                 appearance-none
@@ -67,13 +67,13 @@
               class="form-check-label inline-block text-gray-800"
               for="flexRadioDefault1"
             >
-              TRANSPORTADORA
+              ENTREGA
             </label>
           </div>
           <div class="form-check">
             <input
               v-model="tipo"
-              value="entrega"
+              value="transportadora"
               class="
                 form-check-input
                 appearance-none
@@ -102,7 +102,7 @@
               class="form-check-label inline-block text-gray-800"
               for="flexRadioDefault2"
             >
-              ENTREGA
+              TRANSPORTADORA
             </label>
           </div>
         </div>
@@ -197,7 +197,7 @@
         </p>
       </div>
 
-      <div v-if="tipo == 'transportadora'">
+      <div v-if="tipo == 'entrega'">
         <label
           for="tipo-motoboy"
           class="
@@ -546,7 +546,7 @@
           </div>
         </div>
       </div>
-      <div v-if="tipo == 'entrega'">
+      <div v-if="tipo == 'transportadora'">
         <div class="item-corpo">
           <!-- Datepicker -->
           <label
@@ -641,7 +641,7 @@ export default {
   directives: { mask },
   data() {
     return {
-      tipo: "transportadora",
+      tipo: "entrega",
       tipoMotoboy: "",
       numeronf: "",
       datafaturamento: null,
@@ -693,7 +693,7 @@ export default {
         : "bg-blue-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed";
     },
     submit() {
-      if (this.tipo == "transportadora") {
+      if (this.tipo == "entrega") {
         return (
           this.empresa &&
           this.numeronf &&
@@ -704,7 +704,7 @@ export default {
           this.horarioEntrega.length == 5 &&
           this.distancia
         );
-      } else if (this.tipo == "entrega") {
+      } else if (this.tipo == "transportadora") {
         return (
           this.empresa &&
           this.numeronf &&
